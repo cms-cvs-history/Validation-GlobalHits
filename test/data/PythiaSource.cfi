@@ -1,0 +1,37 @@
+# PythiaSource config. has been taken from
+# test example in IOMC/GeneratorInterface/test/mcinput.cfg
+# thanks to Filip Moortgat and Joanna Weng !
+#
+source = PythiaSource
+{
+   untracked int32 maxEvents = 20
+   untracked bool pythiaVerbosity = false
+   PSet PythiaParameters =
+   {
+      vstring parameterSets = 
+      {
+         "pythiaDefault", 
+	 "pythiaMinBias", 
+	 "myParameters"
+      }
+         
+      #defaults for min bias (unfiltered)
+      # the value(s) above will NOT be overriden
+      #
+      include "IOMC/GeneratorInterface/test/pythiaMinBias.cfg"
+         
+      # defaults (for pythia; mostly empty)
+      # the value(s) above will NOT be overriden
+      #
+      include "IOMC/GeneratorInterface/test/pythiaDefault.cfg"
+
+      # User cards - name is "myParameters"
+      #
+      vstring myParameters = 
+      {
+        #random number generation seed
+        #
+	'MRPY(1)= 123456789 ! Automatically random if -1'
+      }
+   }
+}

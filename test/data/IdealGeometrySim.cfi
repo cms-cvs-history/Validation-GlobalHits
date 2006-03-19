@@ -1,0 +1,7 @@
+es_source = XMLIdealGeometryESSource 
+{ 
+   FileInPath GeometryConfiguration = "Geometry/CMSCommonData/data/SimConfiguration.xml"
+   #the proper root node is set in the xml file
+   string rootNodeName = "cms:OCMS"
+}
+es_module = TrackerGeometricDetESModule {}

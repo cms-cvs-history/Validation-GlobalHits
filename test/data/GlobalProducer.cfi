@@ -1,0 +1,62 @@
+# needed geometries
+#
+es_module = TrackerDigiGeometryESModule {}
+es_module = EcalPreshowerGeometryEP {}
+es_module = EcalBarrelGeometryEP {}
+es_module = EcalEndcapGeometryEP {}
+es_module = HcalHardcodeGeometryEP {}
+es_module = CaloTowerHardcodeGeometryEP {}
+es_module = CaloGeometryBuilder {}
+es_module = CSCGeometryESModule
+{
+   bool useRadialStrips       = true
+   bool useRealWireGeometry   = false
+   bool useGangedStripsInME1a = true
+   bool useOnlyWiresInME1a    = false
+}
+es_module = DTGeometryESModule{}
+es_module = RPCGeometryESModule {} 
+  
+# module setup
+# 
+module gvp = GlobalValProducer
+{
+   untracked string Name = "GlobalValProducer"
+   untracked int32 Verbosity = 2  # 0 provides no output
+                                  # 1 provides basic output
+                                  # 2 provides output of the fill step + 1
+                                  # 3 provides output of the store step + 2
+   string Label = "GlobalStats"
+   PSet ProvenanceLookup =
+   {
+      untracked bool GetAllProvenances = false
+      untracked bool PrintProvenanceInfo = false
+   }
+}
+
+# service utilities
+#
+service = MessageLogger
+{
+    vstring destinations =
+    {
+       "MessageLogger.log",
+       "cout"
+    }
+    PSet MessageLogger.log =
+    {
+       int32 lineLength = 132
+       bool noLineBreaks = true
+    }
+    PSet cout =
+    {
+       int32 lineLength = 132
+       bool noLineBreaks = true
+    }
+}
+
+service = Timing {}
+service = SimpleMemoryCheck
+{
+   untracked int32 ignoreTotal = 1 # default is one
+}
