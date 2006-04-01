@@ -1,0 +1,4 @@
+service = SimpleMemoryCheck
+{
+   untracked int32 ignoreTotal = 1 # default is one
+}

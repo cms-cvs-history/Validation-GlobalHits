@@ -1,0 +1,46 @@
+service = MessageLogger
+{
+   vstring destinations =
+   {
+      "MessageLogger.log",
+      "cout",
+      "cerr"
+   }
+   PSet MessageLogger.log =
+   {
+      int32 lineLength = 132
+      bool noLineBreaks = true
+   }
+   PSet cout =
+   {
+      int32 lineLength = 132
+      bool noLineBreaks = true
+      string threshold = "INFO"
+   }
+   PSet cerr =
+   {
+      int32 lineLength = 132
+      bool noLineBreaks = true
+      string threshold = "WARNING"
+   }
+
+   untracked vstring fwkJobReports = 
+   {
+      "FrameworkJobReport.xml"
+   }
+   vstring categories = 
+   { 
+      "FwkJob" 
+   }
+   PSet FrameworkJobReport.xml = 
+   {
+      PSet default = 
+      { 
+         int32 limit = 0 
+      }
+      PSet FwkJob = 
+      { 
+         int32 limit = 10000000 
+      }
+   }
+}
