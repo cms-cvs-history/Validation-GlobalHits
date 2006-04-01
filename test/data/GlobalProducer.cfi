@@ -1,21 +1,17 @@
 # needed geometries
 #
-es_module = TrackerDigiGeometryESModule {}
+include "Geometry/TrackerGeometryBuilder/data/trackerGeometry.cfi"
+
 es_module = EcalPreshowerGeometryEP {}
 es_module = EcalBarrelGeometryEP {}
 es_module = EcalEndcapGeometryEP {}
 es_module = HcalHardcodeGeometryEP {}
 es_module = CaloTowerHardcodeGeometryEP {}
 es_module = CaloGeometryBuilder {}
-es_module = CSCGeometryESModule
-{
-   bool useRadialStrips       = true
-   bool useRealWireGeometry   = false
-   bool useGangedStripsInME1a = true
-   bool useOnlyWiresInME1a    = false
-}
-es_module = DTGeometryESModule{}
-es_module = RPCGeometryESModule {} 
+
+include "Geometry/CSCGeometry/data/cscGeometry.cfi"
+include "Geometry/DTGeometry/data/dtGeometry.cfi"
+include "Geometry/RPCGeometry/data/rpcGeometry.cfi"
   
 # module setup
 # 
@@ -32,31 +28,4 @@ module gvp = GlobalValProducer
       untracked bool GetAllProvenances = false
       untracked bool PrintProvenanceInfo = false
    }
-}
-
-# service utilities
-#
-service = MessageLogger
-{
-    vstring destinations =
-    {
-       "MessageLogger.log",
-       "cout"
-    }
-    PSet MessageLogger.log =
-    {
-       int32 lineLength = 132
-       bool noLineBreaks = true
-    }
-    PSet cout =
-    {
-       int32 lineLength = 132
-       bool noLineBreaks = true
-    }
-}
-
-service = Timing {}
-service = SimpleMemoryCheck
-{
-   untracked int32 ignoreTotal = 1 # default is one
 }
