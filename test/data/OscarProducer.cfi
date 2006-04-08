@@ -78,15 +78,15 @@ module SimG4Object = OscarProducer
    {
       bool   KillBeamPipe = true
       double CriticalEnergyForVacuum = 2.0
-      double CriticalDensity = 1.e-25
+      double CriticalDensity = 1.e-15
       untracked int32  Verbosity = 0
    }
       
    PSet TrackerSD =
    {
       bool    ZeroEnergyLoss = false
-      bool	 NeverAccumulate = false
-      bool	 PrintHits = false
+      bool    NeverAccumulate = false
+      bool    PrintHits = false
       double  ElectronicSigmaInNanoSeconds = 12.06         
       double  EnergyThresholdForPersistencyInGeV = 0.5
       double  EnergyThresholdForHistoryInGeV = 0.05
