@@ -403,7 +403,7 @@ void MakeHistograms()
     hMuonCscToF[i]->SetLineWidth(linewidth);
   }  
   hMuonCscZ = 
-    new TH1F("hMuonCscZ_4203","Muon CSC hits, Z/cm",100,0.,1500.);
+    new TH1F("hMuonCscZ_4203","Muon CSC hits, Z/cm",201,-1500.,1500.);
   hMuonCscZ->GetXaxis()->SetTitle("Z of Hits (cm)");
   hMuonCscZ->GetYaxis()->SetTitle("Count");
   hMuonCscZ->SetLineColor(srccolor);
@@ -441,7 +441,8 @@ void MakeHistograms()
     hMuonRpcFToF[i]->SetLineWidth(linewidth);
   }  
   hMuonRpcFZ = 
-    new TH1F("hMuonRpcFZ_4306","Muon RPC forward  hits, Z/cm",100,0.,1500.);
+    new TH1F("hMuonRpcFZ_4306","Muon RPC forward  hits, Z/cm",
+	     201,-1500.,1500.);
   hMuonRpcFZ->GetXaxis()->SetTitle("Z of Hits (cm)");
   hMuonRpcFZ->GetYaxis()->SetTitle("Count");
   hMuonRpcFZ->SetLineColor(srccolor);
