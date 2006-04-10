@@ -72,9 +72,9 @@ void MakeHistograms()
   // MC
   TH1F *hMCRGP[2];
   hMCRGP[0] = 
-    new TH1F("MCRGP_1003","RawGenParticles",100,0.,5000.);
+    new TH1F("hMCRGP_1003","RawGenParticles",100,0.,5000.);
   hMCRGP[1] = 
-    new TH1F("MCRGP2_1013","RawGenParticles",100,0.,500.);
+    new TH1F("hMCRGP2_1013","RawGenParticles",100,0.,500.);
   for (Int_t i = 0; i < 2; ++i) {
     hMCRGP[i]->GetXaxis()->SetTitle("Number of Raw Generated Particles");
     hMCRGP[i]->GetYaxis()->SetTitle("Count");
@@ -85,9 +85,9 @@ void MakeHistograms()
   // vertex
   TH1F *hMCG4Vtx[2];
   hMCG4Vtx[0] = 
-    new TH1F("MCG4Vtx_1001","G4 Vertices",100,0.,50000.);
+    new TH1F("hMCG4Vtx_1001","G4 Vertices",100,0.,50000.);
   hMCG4Vtx[1] = 
-    new TH1F("MCG4Vtx2_1011","G4 Vertices",100,-0.5,99.5);
+    new TH1F("hMCG4Vtx2_1011","G4 Vertices",100,-0.5,99.5);
   for (Int_t i = 0; i < 2; ++i) {
     hMCG4Vtx[i]->GetXaxis()->SetTitle("Number of Vertices");
     hMCG4Vtx[i]->GetYaxis()->SetTitle("Count");
@@ -95,19 +95,19 @@ void MakeHistograms()
     hMCG4Vtx[i]->SetLineWidth(linewidth);
   }
   TH1F *hGeantVtxX = 
-    new TH1F("GeantVtxX_1101","Geant vertex x/micrometer",101,-50.,50.);
+    new TH1F("hGeantVtxX_1101","Geant vertex x/micrometer",101,-50.,50.);
   hGeantVtxX->GetXaxis()->SetTitle("x of Vertex (um)");
   hGeantVtxX->GetYaxis()->SetTitle("Count");
   hGeantVtxX->SetLineColor(srccolor);
   hGeantVtxX->SetLineWidth(linewidth);
   TH1F *hGeantVtxY =
-    new TH1F("GeantVtxY_1102","Geant vertex y/micrometer",101,-50.,50.);
+    new TH1F("hGeantVtxY_1102","Geant vertex y/micrometer",101,-50.,50.);
   hGeantVtxY->GetXaxis()->SetTitle("y of Vertex (um)");
   hGeantVtxY->GetYaxis()->SetTitle("Count");
   hGeantVtxY->SetLineColor(srccolor);
   hGeantVtxY->SetLineWidth(linewidth);
   TH1F *hGeantVtxZ =
-    new TH1F("GeantVtxZ_1103","Geant vertex z/millimeter",101,-250.,250.);
+    new TH1F("hGeantVtxZ_1103","Geant vertex z/millimeter",101,-250.,250.);
   hGeantVtxZ->GetXaxis()->SetTitle("z of Vertex (mm)");
   hGeantVtxZ->GetYaxis()->SetTitle("Count");
   hGeantVtxZ->SetLineColor(srccolor);
@@ -116,9 +116,9 @@ void MakeHistograms()
   // tracks
   TH1F *hMCG4Trk[2];
   hMCG4Trk[0] = 
-    new TH1F("MCG4Trk_1002","G4 Tracks",150,0.,15000.);
+    new TH1F("hMCG4Trk_1002","G4 Tracks",150,0.,15000.);
   hMCG4Trk[1] = 
-    new TH1F("MCG4Trk2_1012","G4 Tracks",150,-0.5,99.5);  
+    new TH1F("hMCG4Trk2_1012","G4 Tracks",150,-0.5,99.5);  
   for (Int_t i = 0; i < 2; ++i) {
     hMCG4Trk[i]->GetXaxis()->SetTitle("Number of Tracks");
     hMCG4Trk[i]->GetYaxis()->SetTitle("Count");
@@ -126,13 +126,13 @@ void MakeHistograms()
     hMCG4Trk[i]->SetLineWidth(linewidth);
   }
   TH1F *hGeantTrkPt =
-    new TH1F("GeantTrkPt_1201","Geant track pt/GeV",100,0.,200.);
+    new TH1F("hGeantTrkPt_1201","Geant track pt/GeV",100,0.,200.);
   hGeantTrkPt->GetXaxis()->SetTitle("pT of Track (GeV)");
   hGeantTrkPt->GetYaxis()->SetTitle("Count");
   hGeantTrkPt->SetLineColor(srccolor);
   hGeantTrkPt->SetLineWidth(linewidth);
   TH1F *hGeantTrkE =
-    new TH1F("GeantTrkE_1202","Geant track E/GeV",100,0.,5000.);
+    new TH1F("hGeantTrkE_1202","Geant track E/GeV",100,0.,5000.);
   hGeantTrkE->GetXaxis()->SetTitle("E of Track (GeV)");
   hGeantTrkE->GetYaxis()->SetTitle("Count");
   hGeantTrkE->SetLineColor(srccolor);
@@ -778,7 +778,7 @@ void MakeHistograms()
   Canvas8->Divide(2,4);
   myCanvas = Canvas8;
   myCanvas->cd(0);
-  label->DrawLatex(0.5,1.00,"Silicon Strip Information");
+  label->DrawLatex(0.5,1.00,"Strip Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
     hTrackerSi[i]->Draw();
