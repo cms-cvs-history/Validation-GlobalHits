@@ -4,7 +4,7 @@
 #
 source = PythiaSource
 {
-   untracked int32 maxEvents = 20
+   untracked int32 maxEvents = 500
    untracked bool pythiaVerbosity = false
    PSet PythiaParameters =
    {
