@@ -1,0 +1,8 @@
+  source = PoolSource
+  {
+     untracked vstring fileNames = 
+     {
+	'file:evtgen_detsim.root'
+     }
+     untracked int32 maxEvents = 500
+  }
