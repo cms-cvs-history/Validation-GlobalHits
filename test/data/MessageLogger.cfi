@@ -1,46 +1,102 @@
 service = MessageLogger
 {
-   vstring destinations =
+   untracked vstring destinations =
    {
       "MessageLogger.log",
       "cout",
       "cerr"
-   }
-   PSet MessageLogger.log =
-   {
-      int32 lineLength = 132
-      bool noLineBreaks = true
-   }
-   PSet cout =
-   {
-      int32 lineLength = 132
-      bool noLineBreaks = true
-      string threshold = "INFO"
-   }
-   PSet cerr =
-   {
-      int32 lineLength = 132
-      bool noLineBreaks = true
-      string threshold = "WARNING"
    }
 
    untracked vstring fwkJobReports = 
    {
       "FrameworkJobReport.xml"
    }
+
    vstring categories = 
    { 
-      "FwkJob" 
+      "FwkJob",
+      "GlobalValProducer.GlobalValProducer",
+      "GlobalValProducer.endJob",
+      "GlobalValProducer.produce",
+      "GlobalValProducer.fillG4MC",
+      "GlobalValProducer.storeG4MC",
+      "GlobalValProducer.fillTrk",
+      "GlobalValProducer.storeTrk",
+      "GlobalValProducer.fillMuon",
+      "GlobalValProducer.storeMuon",
+      "GlobalValProducer.fillECal",
+      "GlobalValProducer.storeECal",
+      "GlobalValProducer.fillHCal",
+      "GlobalValProducer.storeHCal",
+      "GlobalValProducer.clear" 
    }
+
+   PSet MessageLogger.log =
+   {
+      int32 lineLength = 132
+      bool noLineBreaks = true
+      PSet default = { int32 limit = 0  }
+      PSet GlobalValProducer.GlobalValProducer = { int32 limit = 10000000 }
+      PSet GlobalValProducer.endJob = { int32 limit = 10000000 }
+      PSet GlobalValProducer.produce = { int32 limit = 10000000 }
+      PSet GlobalValProducer.fillG4MC = { int32 limit = 10000000 }
+      PSet GlobalValProducer.storeG4MC = { int32 limit = 10000000 }
+      PSet GlobalValProducer.fillTrk = { int32 limit = 10000000 }
+      PSet GlobalValProducer.storeTrk = { int32 limit = 10000000 }
+      PSet GlobalValProducer.fillMuon = { int32 limit = 10000000 }
+      PSet GlobalValProducer.storeMuon = { int32 limit = 10000000 }
+      PSet GlobalValProducer.fillECal = { int32 limit = 10000000 }
+      PSet GlobalValProducer.storeECal = { int32 limit = 10000000 }
+      PSet GlobalValProducer.fillHCal = { int32 limit = 10000000 }
+      PSet GlobalValProducer.storeHCal = { int32 limit = 10000000 }
+      PSet GlobalValProducer.clear = { int32 limit = 10000000 }
+   }
+   PSet cout =
+   {
+      int32 lineLength = 132
+      bool noLineBreaks = true
+      string threshold = "INFO"
+      PSet default = { int32 limit = 0  }
+      PSet GlobalValProducer.GlobalValProducer = { int32 limit = 10000000 }
+      PSet GlobalValProducer.endJob = { int32 limit = 10000000 }
+      PSet GlobalValProducer.produce = { int32 limit = 10000000 }
+      PSet GlobalValProducer.fillG4MC = { int32 limit = 10000000 }
+      PSet GlobalValProducer.storeG4MC = { int32 limit = 10000000 }
+      PSet GlobalValProducer.fillTrk = { int32 limit = 10000000 }
+      PSet GlobalValProducer.storeTrk = { int32 limit = 10000000 }
+      PSet GlobalValProducer.fillMuon = { int32 limit = 10000000 }
+      PSet GlobalValProducer.storeMuon = { int32 limit = 10000000 }
+      PSet GlobalValProducer.fillECal = { int32 limit = 10000000 }
+      PSet GlobalValProducer.storeECal = { int32 limit = 10000000 }
+      PSet GlobalValProducer.fillHCal = { int32 limit = 10000000 }
+      PSet GlobalValProducer.storeHCal = { int32 limit = 10000000 }
+      PSet GlobalValProducer.clear = { int32 limit = 10000000 }  
+   }
+   PSet cerr =
+   {
+      int32 lineLength = 132
+      bool noLineBreaks = true
+      string threshold = "WARNING"
+      PSet default = { int32 limit = 0  }
+      PSet GlobalValProducer.GlobalValProducer = { int32 limit = 10000000 }
+      PSet GlobalValProducer.endJob = { int32 limit = 10000000 }
+      PSet GlobalValProducer.produce = { int32 limit = 10000000 }
+      PSet GlobalValProducer.fillG4MC = { int32 limit = 10000000 }
+      PSet GlobalValProducer.storeG4MC = { int32 limit = 10000000 }
+      PSet GlobalValProducer.fillTrk = { int32 limit = 10000000 }
+      PSet GlobalValProducer.storeTrk = { int32 limit = 10000000 }
+      PSet GlobalValProducer.fillMuon = { int32 limit = 10000000 }
+      PSet GlobalValProducer.storeMuon = { int32 limit = 10000000 }
+      PSet GlobalValProducer.fillECal = { int32 limit = 10000000 }
+      PSet GlobalValProducer.storeECal = { int32 limit = 10000000 }
+      PSet GlobalValProducer.fillHCal = { int32 limit = 10000000 }
+      PSet GlobalValProducer.storeHCal = { int32 limit = 10000000 }
+      PSet GlobalValProducer.clear = { int32 limit = 10000000 }  
+   }
+
    PSet FrameworkJobReport.xml = 
    {
-      PSet default = 
-      { 
-         int32 limit = 0 
-      }
-      PSet FwkJob = 
-      { 
-         int32 limit = 10000000 
-      }
+      PSet default = { int32 limit = 0 }
+      PSet FwkJob = { int32 limit = 10000000 }
    }
 }
