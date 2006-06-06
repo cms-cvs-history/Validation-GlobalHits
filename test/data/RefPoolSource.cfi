@@ -1,0 +1,8 @@
+source = PoolSource
+{
+   untracked vstring fileNames = 
+   {
+      'file:MC_060_minbias.root'
+   }
+   untracked int32 maxEvents = 500
+}
