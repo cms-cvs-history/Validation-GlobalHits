@@ -12,7 +12,7 @@ service = MessageLogger
       "FrameworkJobReport.xml"
    }
 
-   vstring categories = 
+   untracked vstring categories = 
    { 
       "FwkJob",
       "GlobalValProducer.GlobalValProducer",
@@ -31,72 +31,72 @@ service = MessageLogger
       "GlobalValProducer.clear" 
    }
 
-   PSet MessageLogger.log =
+   untracked PSet MessageLogger.log =
    {
-      int32 lineLength = 132
-      bool noLineBreaks = true
-      PSet default = { int32 limit = 0  }
-      PSet GlobalValProducer.GlobalValProducer = { int32 limit = 10000000 }
-      PSet GlobalValProducer.endJob = { int32 limit = 10000000 }
-      PSet GlobalValProducer.produce = { int32 limit = 10000000 }
-      PSet GlobalValProducer.fillG4MC = { int32 limit = 10000000 }
-      PSet GlobalValProducer.storeG4MC = { int32 limit = 10000000 }
-      PSet GlobalValProducer.fillTrk = { int32 limit = 10000000 }
-      PSet GlobalValProducer.storeTrk = { int32 limit = 10000000 }
-      PSet GlobalValProducer.fillMuon = { int32 limit = 10000000 }
-      PSet GlobalValProducer.storeMuon = { int32 limit = 10000000 }
-      PSet GlobalValProducer.fillECal = { int32 limit = 10000000 }
-      PSet GlobalValProducer.storeECal = { int32 limit = 10000000 }
-      PSet GlobalValProducer.fillHCal = { int32 limit = 10000000 }
-      PSet GlobalValProducer.storeHCal = { int32 limit = 10000000 }
-      PSet GlobalValProducer.clear = { int32 limit = 10000000 }
+      untracked int32 lineLength = 132
+      untracked bool noLineBreaks = true
+      untracked PSet default = { untracked int32 limit = 0  }
+      untracked PSet GlobalValProducer.GlobalValProducer = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.endJob = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.produce = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.fillG4MC = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.storeG4MC = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.fillTrk = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.storeTrk = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.fillMuon = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.storeMuon = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.fillECal = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.storeECal = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.fillHCal = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.storeHCal = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.clear = { untracked int32 limit = 10000000 }
    }
-   PSet cout =
+   untracked PSet cout =
    {
-      int32 lineLength = 132
-      bool noLineBreaks = true
-      string threshold = "INFO"
-      PSet default = { int32 limit = 0  }
-      PSet GlobalValProducer.GlobalValProducer = { int32 limit = 10000000 }
-      PSet GlobalValProducer.endJob = { int32 limit = 10000000 }
-      PSet GlobalValProducer.produce = { int32 limit = 10000000 }
-      PSet GlobalValProducer.fillG4MC = { int32 limit = 10000000 }
-      PSet GlobalValProducer.storeG4MC = { int32 limit = 10000000 }
-      PSet GlobalValProducer.fillTrk = { int32 limit = 10000000 }
-      PSet GlobalValProducer.storeTrk = { int32 limit = 10000000 }
-      PSet GlobalValProducer.fillMuon = { int32 limit = 10000000 }
-      PSet GlobalValProducer.storeMuon = { int32 limit = 10000000 }
-      PSet GlobalValProducer.fillECal = { int32 limit = 10000000 }
-      PSet GlobalValProducer.storeECal = { int32 limit = 10000000 }
-      PSet GlobalValProducer.fillHCal = { int32 limit = 10000000 }
-      PSet GlobalValProducer.storeHCal = { int32 limit = 10000000 }
-      PSet GlobalValProducer.clear = { int32 limit = 10000000 }  
+      untracked int32 lineLength = 132
+      untracked bool noLineBreaks = true
+      untracked string threshold = "INFO"
+      untracked PSet default = { untracked int32 limit = 0  }
+      untracked PSet GlobalValProducer.GlobalValProducer = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.endJob = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.produce = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.fillG4MC = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.storeG4MC = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.fillTrk = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.storeTrk = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.fillMuon = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.storeMuon = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.fillECal = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.storeECal = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.fillHCal = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.storeHCal = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.clear = { untracked int32 limit = 10000000 }  
    }
-   PSet cerr =
+   untracked PSet cerr =
    {
-      int32 lineLength = 132
-      bool noLineBreaks = true
-      string threshold = "WARNING"
-      PSet default = { int32 limit = 0  }
-      PSet GlobalValProducer.GlobalValProducer = { int32 limit = 10000000 }
-      PSet GlobalValProducer.endJob = { int32 limit = 10000000 }
-      PSet GlobalValProducer.produce = { int32 limit = 10000000 }
-      PSet GlobalValProducer.fillG4MC = { int32 limit = 10000000 }
-      PSet GlobalValProducer.storeG4MC = { int32 limit = 10000000 }
-      PSet GlobalValProducer.fillTrk = { int32 limit = 10000000 }
-      PSet GlobalValProducer.storeTrk = { int32 limit = 10000000 }
-      PSet GlobalValProducer.fillMuon = { int32 limit = 10000000 }
-      PSet GlobalValProducer.storeMuon = { int32 limit = 10000000 }
-      PSet GlobalValProducer.fillECal = { int32 limit = 10000000 }
-      PSet GlobalValProducer.storeECal = { int32 limit = 10000000 }
-      PSet GlobalValProducer.fillHCal = { int32 limit = 10000000 }
-      PSet GlobalValProducer.storeHCal = { int32 limit = 10000000 }
-      PSet GlobalValProducer.clear = { int32 limit = 10000000 }  
+      untracked int32 lineLength = 132
+      untracked bool noLineBreaks = true
+      untracked string threshold = "WARNING"
+      untracked PSet default = { untracked int32 limit = 0  }
+      untracked PSet GlobalValProducer.GlobalValProducer = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.endJob = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.produce = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.fillG4MC = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.storeG4MC = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.fillTrk = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.storeTrk = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.fillMuon = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.storeMuon = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.fillECal = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.storeECal = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.fillHCal = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.storeHCal = { untracked int32 limit = 10000000 }
+      untracked PSet GlobalValProducer.clear = { untracked int32 limit = 10000000 }  
    }
 
-   PSet FrameworkJobReport.xml = 
+   untracked PSet FrameworkJobReport.xml = 
    {
-      PSet default = { int32 limit = 0 }
-      PSet FwkJob = { int32 limit = 10000000 }
+      untracked PSet default = { untracked int32 limit = 0 }
+      untracked PSet FwkJob = { untracked int32 limit = 10000000 }
    }
 }
