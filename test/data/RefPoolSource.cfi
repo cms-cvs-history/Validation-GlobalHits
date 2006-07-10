@@ -3,6 +3,7 @@ source = PoolSource
    untracked vstring fileNames = 
    {
       'file:/afs/cern.ch/cms/data/CMSSW/Validation/GlobalHits/data/MC_060_minbias.root'
+#      'file:MC_060_minbias.root'
    }
    untracked int32 maxEvents = 500
 }
