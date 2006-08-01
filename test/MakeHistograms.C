@@ -17,7 +17,7 @@ void MakeHistograms()
   // setup names
   TString srcname = "GlobalValProducer.root";
   TString treename = "Events";
-  TString brnchname = "PGlobalSimHit_gvp_GlobalStats.obj";
+  TString brnchname = "PGlobalSimHit_gvp_GlobalStats_GLOBAL.obj";
 
   // clear memory of file name
   delete gROOT->GetListOfFiles()->FindObject(srcname);
