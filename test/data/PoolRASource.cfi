@@ -1,13 +1,10 @@
-# actual location is /pnfs/cms/WAX/12/
+# actual location is /pnfs/cms/WAX/11/
 source = PoolRASource
 {
    untracked vstring fileNames = 
    {
-      "dcap://cmsdca.fnal.gov:24136/pnfs/fnal.gov/usr/cms/WAX/12/PreProd06Minbias/PreProd06Minbias-301-GEN-SIM.root",
-      "dcap://cmsdca.fnal.gov:24136/pnfs/fnal.gov/usr/cms/WAX/12/PreProd06Minbias/PreProd06Minbias-302-GEN-SIM.root",
-      "dcap://cmsdca.fnal.gov:24136/pnfs/fnal.gov/usr/cms/WAX/12/PreProd06Minbias/PreProd06Minbias-303-GEN-SIM.root",
-      "dcap://cmsdca.fnal.gov:24136/pnfs/fnal.gov/usr/cms/WAX/12/PreProd06Minbias/PreProd06Minbias-304-GEN-SIM.root",
-      "dcap://cmsdca.fnal.gov:24136/pnfs/fnal.gov/usr/cms/WAX/12/PreProd06Minbias/PreProd06Minbias-308-GEN-SIM.root"
+      "dcap://cmsdca.fnal.gov:24136/pnfs/fnal.gov/usr/cms/WAX/11/store/CSA06/2006/7/25/CSA06-080-os-minbias/02390486-541D-DB11-BCAE-003048767FAB.root",
+      "dcap://cmsdca.fnal.gov:24136/pnfs/fnal.gov/usr/cms/WAX/11/store/CSA06/2006/7/25/CSA06-080-os-minbias/0415D110-741D-DB11-9ED0-00304875AA73.root"
    }
    untracked int32 maxEvents = -1
 }
