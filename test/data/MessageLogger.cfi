@@ -28,7 +28,9 @@ service = MessageLogger
       "GlobalValProducer.storeECal",
       "GlobalValProducer.fillHCal",
       "GlobalValProducer.storeHCal",
-      "GlobalValProducer.clear" 
+      "GlobalValProducer.clear",
+      "ScheduleExecutionFailure",
+      "EventSetupDependency" 
    }
 
    untracked PSet MessageLogger.log =
@@ -50,6 +52,8 @@ service = MessageLogger
       untracked PSet GlobalValProducer.fillHCal = { untracked int32 limit = 10000000 }
       untracked PSet GlobalValProducer.storeHCal = { untracked int32 limit = 10000000 }
       untracked PSet GlobalValProducer.clear = { untracked int32 limit = 10000000 }
+      untracked PSet ScheduleExecutionFailure = { untracked int32 limit = 10000000 }
+      untracked PSet EventSetupDependency = { untracked int32 limit = 10000000 }
    }
    untracked PSet cout =
    {
@@ -70,7 +74,9 @@ service = MessageLogger
       untracked PSet GlobalValProducer.storeECal = { untracked int32 limit = 10000000 }
       untracked PSet GlobalValProducer.fillHCal = { untracked int32 limit = 10000000 }
       untracked PSet GlobalValProducer.storeHCal = { untracked int32 limit = 10000000 }
-      untracked PSet GlobalValProducer.clear = { untracked int32 limit = 10000000 }  
+      untracked PSet GlobalValProducer.clear = { untracked int32 limit = 10000000 }
+      //untracked PSet ScheduleExecutionFailure = { untracked int32 limit = 10000000 }
+      //untracked PSet EventSetupDependency = { untracked int32 limit = 10000000 }  
    }
    untracked PSet cerr =
    {
@@ -91,7 +97,9 @@ service = MessageLogger
       untracked PSet GlobalValProducer.storeECal = { untracked int32 limit = 10000000 }
       untracked PSet GlobalValProducer.fillHCal = { untracked int32 limit = 10000000 }
       untracked PSet GlobalValProducer.storeHCal = { untracked int32 limit = 10000000 }
-      untracked PSet GlobalValProducer.clear = { untracked int32 limit = 10000000 }  
+      untracked PSet GlobalValProducer.clear = { untracked int32 limit = 10000000 } 
+      untracked PSet ScheduleExecutionFailure = { untracked int32 limit = 10000000 }
+      untracked PSet EventSetupDependency = { untracked int32 limit = 10000000 } 
    }
 
    untracked PSet FrameworkJobReport.xml = 
