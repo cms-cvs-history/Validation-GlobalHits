@@ -469,6 +469,12 @@ void MakeHistograms()
 
   // cycle through events in tree
   for (Int_t evt = 0; evt < nsrcevts; ++evt) {
+    Int_t nevt = evt+1;
+
+    if (nevt%100 == 0 || nevt == 1) {
+      cout << "     Processing event " << nevt << endl;
+    }
+
     srcbrnch->GetEntry(evt);
 
     int nPxlBrlHits = srcGlobalStats.getnPxlBrlHits();

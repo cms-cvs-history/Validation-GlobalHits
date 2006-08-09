@@ -1,1 +1,1 @@
-current reference file is from CMSSW_0_6_0
+current reference file is from CMSSW_0_8_1
