@@ -23,6 +23,7 @@ module gvp = GlobalValProducer
                                   # 2 provides output of the fill step + 1
                                   # 3 provides output of the store step + 2
    string Label = "GlobalStats"
+   untracked int32 Frequency = 50
    PSet ProvenanceLookup =
    {
       untracked bool GetAllProvenances = false
