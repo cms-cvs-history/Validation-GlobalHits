@@ -1,0 +1,8 @@
+service = RandomNumberGeneratorService
+{
+   untracked uint32 sourceSeed = 135799753
+   PSet moduleSeeds =
+   {
+      untracked uint32 VtxSmeared = 123456789
+   }
+}
