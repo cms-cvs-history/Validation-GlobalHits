@@ -1,9 +1,0 @@
-source = PoolSource
-{
-   untracked vstring fileNames = 
-   {
-      //'file:/afs/cern.ch/cms/data/CMSSW/Validation/GlobalHits/data/MC_100p2_minbias.root'
-      'file:MC_100p2_minbias.root'
-   }
-   untracked int32 maxEvents = 7000
-}
