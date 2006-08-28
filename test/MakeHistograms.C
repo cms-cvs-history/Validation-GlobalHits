@@ -15,9 +15,9 @@ void MakeHistograms()
   gStyle->SetOptStat("emruo");
 
   // setup names
-  TString srcname = "GlobalValProducer.root";
+  TString srcname = "GlobalHits.root";
   TString treename = "Events";
-  TString brnchname = "PGlobalSimHit_gvp_GlobalStats_GLOBAL.obj";
+  TString brnchname = "PGlobalSimHit_globalhits_GlobalHits_GLOBAL.obj";
 
   // clear memory of file name
   delete gROOT->GetListOfFiles()->FindObject(srcname);
@@ -37,15 +37,15 @@ void MakeHistograms()
   Int_t nsrcevts = srcevts->GetEntries();
 
   // set access to branch as proper object
-  PGlobalSimHit srcGlobalStats;
-  srcbrnch->SetAddress(&srcGlobalStats);
+  PGlobalSimHit srcGlobalHits;
+  srcbrnch->SetAddress(&srcGlobalHits);
 
   // create canvas
   Int_t cWidth = 928, cHeight = 1218;
-  TCanvas *myCanvas = new TCanvas("gvp","gvp",cWidth,cHeight);
+  TCanvas *myCanvas = new TCanvas("globalhits","globalhits",cWidth,cHeight);
   
   // open output ps file
-  TString filename = "GlobalValHistograms";
+  TString filename = "GlobalHitsHistograms";
   TString psfile = filename+".ps";
   TString psfileopen = filename+".ps[";
   TString psfileclose = filename+".ps]";
@@ -477,34 +477,34 @@ void MakeHistograms()
 
     srcbrnch->GetEntry(evt);
 
-    int nPxlBrlHits = srcGlobalStats.getnPxlBrlHits();
-    int nPxlFwdHits = srcGlobalStats.getnPxlFwdHits();
+    int nPxlBrlHits = srcGlobalHits.getnPxlBrlHits();
+    int nPxlFwdHits = srcGlobalHits.getnPxlFwdHits();
     int nPxlHits = nPxlBrlHits + nPxlFwdHits;
-    int nSiBrlHits = srcGlobalStats.getnSiBrlHits();
-    int nSiFwdHits = srcGlobalStats.getnSiFwdHits();
+    int nSiBrlHits = srcGlobalHits.getnSiBrlHits();
+    int nSiFwdHits = srcGlobalHits.getnSiFwdHits();
     int nSiHits = nSiBrlHits + nSiFwdHits;    
-    int nMuonDtHits = srcGlobalStats.getnMuonDtHits();
-    int nMuonCscHits = srcGlobalStats.getnMuonCscHits();
-    int nMuonRpcBrlHits = srcGlobalStats.getnMuonRpcBrlHits();
-    int nMuonRpcFwdHits = srcGlobalStats.getnMuonRpcFwdHits();
+    int nMuonDtHits = srcGlobalHits.getnMuonDtHits();
+    int nMuonCscHits = srcGlobalHits.getnMuonCscHits();
+    int nMuonRpcBrlHits = srcGlobalHits.getnMuonRpcBrlHits();
+    int nMuonRpcFwdHits = srcGlobalHits.getnMuonRpcFwdHits();
     int nMuonHits = nMuonDtHits + nMuonCscHits + nMuonRpcBrlHits +
       nMuonRpcFwdHits;
 
     // get stats for number of objects
     for (Int_t i = 0; i < 2; ++i) {
-      hMCRGP[i]->Fill((float)srcGlobalStats.getnRawGenPart());
-      hMCG4Vtx[i]->Fill((float)srcGlobalStats.getnG4Vtx());
-      hMCG4Trk[i]->Fill((float)srcGlobalStats.getnG4Trk());
-      hCaloEcal[i]->Fill((float)srcGlobalStats.getnECalHits());
-      hCaloPreSh[i]->Fill((float)srcGlobalStats.getnPreShHits());
-      hCaloHcal[i]->Fill((float)srcGlobalStats.getnHCalHits());
+      hMCRGP[i]->Fill((float)srcGlobalHits.getnRawGenPart());
+      hMCG4Vtx[i]->Fill((float)srcGlobalHits.getnG4Vtx());
+      hMCG4Trk[i]->Fill((float)srcGlobalHits.getnG4Trk());
+      hCaloEcal[i]->Fill((float)srcGlobalHits.getnECalHits());
+      hCaloPreSh[i]->Fill((float)srcGlobalHits.getnPreShHits());
+      hCaloHcal[i]->Fill((float)srcGlobalHits.getnHCalHits());
       hTrackerPx[i]->Fill((float)nPxlHits);
       hTrackerSi[i]->Fill((float)nSiHits);
       hMuon[i]->Fill((float)nMuonHits);
     }
     
     // get G4Vertex info
-    std::vector<PGlobalSimHit::Vtx> G4Vtx = srcGlobalStats.getG4Vtx();
+    std::vector<PGlobalSimHit::Vtx> G4Vtx = srcGlobalHits.getG4Vtx();
     for (Int_t i = 0; i < G4Vtx.size(); ++i) {
       hGeantVtxX->Fill(G4Vtx[i].x);
       hGeantVtxY->Fill(G4Vtx[i].y);
@@ -512,7 +512,7 @@ void MakeHistograms()
     }
 
     // get G4Track info
-    std::vector<PGlobalSimHit::Trk> G4Trk = srcGlobalStats.getG4Trk();
+    std::vector<PGlobalSimHit::Trk> G4Trk = srcGlobalHits.getG4Trk();
     for (Int_t i = 0; i < G4Trk.size(); ++i) {
       hGeantTrkPt->Fill(G4Trk[i].pt);
       hGeantTrkE->Fill(G4Trk[i].e);
@@ -520,7 +520,7 @@ void MakeHistograms()
 
     // get Ecal info
     std::vector<PGlobalSimHit::CalHit> ECalHits = 
-      srcGlobalStats.getECalHits();
+      srcGlobalHits.getECalHits();
     for (Int_t i = 0; i < ECalHits.size(); ++i) {
       for (Int_t j = 0; j < 2; ++j) {
 	hCaloEcalE[j]->Fill(ECalHits[i].e);
@@ -532,7 +532,7 @@ void MakeHistograms()
 
     // get PreShower info
     std::vector<PGlobalSimHit::CalHit> PreShHits = 
-      srcGlobalStats.getPreShHits();
+      srcGlobalHits.getPreShHits();
     for (Int_t i = 0; i < PreShHits.size(); ++i) {
       for (Int_t j = 0; j < 2; ++j) {
 	hCaloPreShE[j]->Fill(PreShHits[i].e);
@@ -544,7 +544,7 @@ void MakeHistograms()
 
     // get Hcal info
     std::vector<PGlobalSimHit::CalHit> HCalHits = 
-      srcGlobalStats.getHCalHits();
+      srcGlobalHits.getHCalHits();
     for (Int_t i = 0; i < HCalHits.size(); ++i) {
       for (Int_t j = 0; j < 2; ++j) {
 	hCaloHcalE[j]->Fill(HCalHits[i].e);
@@ -556,7 +556,7 @@ void MakeHistograms()
 
     // get Pixel Barrel info
     std::vector<PGlobalSimHit::BrlHit> PxlBrlHits = 
-      srcGlobalStats.getPxlBrlHits();
+      srcGlobalHits.getPxlBrlHits();
     for (Int_t i = 0; i < PxlBrlHits.size(); ++i) {
       hTrackerPxPhi->Fill(PxlBrlHits[i].phi);
       hTrackerPxEta->Fill(PxlBrlHits[i].eta);
@@ -566,7 +566,7 @@ void MakeHistograms()
 
     // get Pixel Forward info
     std::vector<PGlobalSimHit::FwdHit> PxlFwdHits = 
-      srcGlobalStats.getPxlFwdHits();
+      srcGlobalHits.getPxlFwdHits();
     for (Int_t i = 0; i < PxlFwdHits.size(); ++i) {
       hTrackerPxPhi->Fill(PxlFwdHits[i].phi);
       hTrackerPxEta->Fill(PxlFwdHits[i].eta);
@@ -576,7 +576,7 @@ void MakeHistograms()
 
     // get Strip Barrel info
     std::vector<PGlobalSimHit::BrlHit> SiBrlHits = 
-      srcGlobalStats.getSiBrlHits();
+      srcGlobalHits.getSiBrlHits();
     for (Int_t i = 0; i < SiBrlHits.size(); ++i) {
       hTrackerSiPhi->Fill(SiBrlHits[i].phi);
       hTrackerSiEta->Fill(SiBrlHits[i].eta);
@@ -586,7 +586,7 @@ void MakeHistograms()
 
     // get Strip Forward info
     std::vector<PGlobalSimHit::FwdHit> SiFwdHits = 
-      srcGlobalStats.getSiFwdHits();
+      srcGlobalHits.getSiFwdHits();
     for (Int_t i = 0; i < SiFwdHits.size(); ++i) {
       hTrackerSiPhi->Fill(SiFwdHits[i].phi);
       hTrackerSiEta->Fill(SiFwdHits[i].eta);
@@ -596,7 +596,7 @@ void MakeHistograms()
 
     // get Muon CSC info
     std::vector<PGlobalSimHit::FwdHit> MuonCscHits = 
-      srcGlobalStats.getMuonCscHits();
+      srcGlobalHits.getMuonCscHits();
     for (Int_t i = 0; i < MuonCscHits.size(); ++i) {
       hMuonPhi->Fill(MuonCscHits[i].phi);
       hMuonEta->Fill(MuonCscHits[i].eta);
@@ -608,7 +608,7 @@ void MakeHistograms()
 
     // get Muon DT info
     std::vector<PGlobalSimHit::BrlHit> MuonDtHits = 
-      srcGlobalStats.getMuonDtHits();
+      srcGlobalHits.getMuonDtHits();
     for (Int_t i = 0; i < MuonDtHits.size(); ++i) {
       hMuonPhi->Fill(MuonDtHits[i].phi);
       hMuonEta->Fill(MuonDtHits[i].eta);
@@ -620,7 +620,7 @@ void MakeHistograms()
 
     // get Muon RPC forward info
     std::vector<PGlobalSimHit::FwdHit> MuonRpcFwdHits = 
-      srcGlobalStats.getMuonRpcFwdHits();
+      srcGlobalHits.getMuonRpcFwdHits();
     for (Int_t i = 0; i < MuonRpcFwdHits.size(); ++i) {
       hMuonPhi->Fill(MuonRpcFwdHits[i].phi);
       hMuonEta->Fill(MuonRpcFwdHits[i].eta);
@@ -632,7 +632,7 @@ void MakeHistograms()
 
     // get Muon RPC barrel info
     std::vector<PGlobalSimHit::BrlHit> MuonRpcBrlHits = 
-      srcGlobalStats.getMuonRpcBrlHits();
+      srcGlobalHits.getMuonRpcBrlHits();
     for (Int_t i = 0; i < MuonRpcBrlHits.size(); ++i) {
       hMuonPhi->Fill(MuonRpcBrlHits[i].phi);
       hMuonEta->Fill(MuonRpcBrlHits[i].eta);
