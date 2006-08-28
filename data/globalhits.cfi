@@ -1,6 +1,6 @@
-module globalhits = GlobalValProducer
+module globalhits = GlobalHitsProducer
 {
-   untracked string Name = "GlobalValProducer"
+   untracked string Name = "GlobalHitsProducer"
    untracked int32 Verbosity = 0  # 0 provides no output
                                   # 1 provides basic output
                                   # 2 provides output of the fill step + 1
