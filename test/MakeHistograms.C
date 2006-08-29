@@ -657,6 +657,7 @@ void MakeHistograms()
   label->DrawLatex(0.5,1.00,"Monte Carlo RawGenPart");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
+    gPad->SetLogy();
     hMCRGP[i]->Draw();
   }
   myCanvas->Print(psfile);
@@ -669,13 +670,17 @@ void MakeHistograms()
   label->DrawLatex(0.5,1.00,"Geant4 Vertices");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
+    gPad->SetLogy();    
     hMCG4Vtx[i]->Draw();
   }
   myCanvas->cd(3);
+  gPad->SetLogy();
   hGeantVtxX->Draw();
   myCanvas->cd(4);
+  gPad->SetLogy();
   hGeantVtxY->Draw();
   myCanvas->cd(5);
+  gPad->SetLogy();
   hGeantVtxZ->Draw();
   myCanvas->Print(psfile);
 
@@ -687,11 +692,14 @@ void MakeHistograms()
   label->DrawLatex(0.5,1.00,"Geant4 Tracks");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
+    gPad->SetLogy();
     hMCG4Trk[i]->Draw();
   }
   myCanvas->cd(3);
+  gPad->SetLogy();  
   hGeantTrkPt->Draw();
   myCanvas->cd(4);
+  gPad->SetLogy();
   hGeantTrkE->Draw();
   myCanvas->Print(psfile);
 
@@ -703,15 +711,20 @@ void MakeHistograms()
   label->DrawLatex(0.5,1.00,"ECal Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
+    gPad->SetLogy();
     hCaloEcal[i]->Draw();
     myCanvas->cd(i+3);
+    gPad->SetLogy();
     hCaloEcalE[i]->Draw();
     myCanvas->cd(i+5);
+    gPad->SetLogy();
     hCaloEcalToF[i]->Draw();
   }
   myCanvas->cd(7);
   hCaloEcalPhi->Draw();
+  gPad->SetLogy();
   myCanvas->cd(8);
+  gPad->SetLogy();
   hCaloEcalEta->Draw();
   myCanvas->Print(psfile);
 
@@ -723,15 +736,20 @@ void MakeHistograms()
   label->DrawLatex(0.5,1.00,"PreShower Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
+    gPad->SetLogy();
     hCaloPreSh[i]->Draw();
     myCanvas->cd(i+3);
+    gPad->SetLogy();
     hCaloPreShE[i]->Draw();
     myCanvas->cd(i+5);
+    gPad->SetLogy();
     hCaloPreShToF[i]->Draw();
   }
   myCanvas->cd(7);
+  gPad->SetLogy();
   hCaloPreShPhi->Draw();
   myCanvas->cd(8);
+  gPad->SetLogy();
   hCaloPreShEta->Draw();
   myCanvas->Print(psfile);
 
@@ -743,15 +761,20 @@ void MakeHistograms()
   label->DrawLatex(0.5,1.00,"HCal Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
+    gPad->SetLogy();
     hCaloHcal[i]->Draw();
     myCanvas->cd(i+3);
+    gPad->SetLogy();
     hCaloHcalE[i]->Draw();
     myCanvas->cd(i+5);
+    gPad->SetLogy();
     hCaloHcalToF[i]->Draw();
   }
   myCanvas->cd(7);
+  gPad->SetLogy();
   hCaloHcalPhi->Draw();
   myCanvas->cd(8);
+  gPad->SetLogy();
   hCaloHcalEta->Draw();
   myCanvas->Print(psfile);
 
@@ -763,19 +786,26 @@ void MakeHistograms()
   label->DrawLatex(0.5,1.00,"Pixel Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
+    gPad->SetLogy();
     hTrackerPx[i]->Draw();
   }
   myCanvas->cd(3);
+  gPad->SetLogy();
   hTrackerPxPhi->Draw();
   myCanvas->cd(4);
+  gPad->SetLogy();
   hTrackerPxEta->Draw();
   myCanvas->cd(5);
+  gPad->SetLogy();
   hTrackerPxBToF->Draw();
   myCanvas->cd(6);
+  gPad->SetLogy(); 
   hTrackerPxBR->Draw();
   myCanvas->cd(7);
+  gPad->SetLogy();
   hTrackerPxFToF->Draw();
   myCanvas->cd(8);
+  gPad->SetLogy();
   hTrackerPxFZ->Draw();
   myCanvas->Print(psfile);
 
@@ -787,19 +817,26 @@ void MakeHistograms()
   label->DrawLatex(0.5,1.00,"Strip Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
+    gPad->SetLogy();
     hTrackerSi[i]->Draw();
   }
   myCanvas->cd(3);
+  gPad->SetLogy();
   hTrackerSiPhi->Draw();
   myCanvas->cd(4);
+  gPad->SetLogy(); 
   hTrackerSiEta->Draw();
   myCanvas->cd(5);
+  gPad->SetLogy();
   hTrackerSiBToF->Draw();
   myCanvas->cd(6);
+  gPad->SetLogy();
   hTrackerSiBR->Draw();
   myCanvas->cd(7);
+  gPad->SetLogy();
   hTrackerSiFToF->Draw();
   myCanvas->cd(8);
+  gPad->SetLogy();
   hTrackerSiFZ->Draw();
   myCanvas->Print(psfile);
 
@@ -811,11 +848,14 @@ void MakeHistograms()
   label->DrawLatex(0.5,1.00,"Muon Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
+    gPad->SetLogy();
     hMuon[i]->Draw();
   }
   myCanvas->cd(3);
+  gPad->SetLogy();
   hMuonPhi->Draw();
   myCanvas->cd(4);
+  gPad->SetLogy();
   hMuonEta->Draw();
   myCanvas->Print(psfile);
 
@@ -827,9 +867,11 @@ void MakeHistograms()
   label->DrawLatex(0.5,1.00,"Muon CSC Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
+    gPad->SetLogy();
     hMuonCscToF[i]->Draw();
   }
   myCanvas->cd(3);
+  gPad->SetLogy();
   hMuonCscZ->Draw();
   myCanvas->Print(psfile);
 
@@ -841,9 +883,11 @@ void MakeHistograms()
   label->DrawLatex(0.5,1.00,"Muon DT Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
+    gPad->SetLogy();
     hMuonDtToF[i]->Draw();
   }
   myCanvas->cd(3);
+  gPad->SetLogy();
   hMuonDtR->Draw();
   myCanvas->Print(psfile);
 
@@ -855,13 +899,17 @@ void MakeHistograms()
   label->DrawLatex(0.5,1.00,"Muon RPC Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
+    gPad->SetLogy();
     hMuonRpcBToF[i]->Draw();
     myCanvas->cd(i+4);
+    gPad->SetLogy();
     hMuonRpcFToF[i]->Draw();
   }
   myCanvas->cd(3);
+  gPad->SetLogy();
   hMuonRpcBR->Draw();
   myCanvas->cd(6);
+  gPad->SetLogy();
   hMuonRpcFZ->Draw();
   myCanvas->Print(psfile);
 
