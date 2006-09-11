@@ -7,6 +7,8 @@ module globalhits = GlobalHitsProducer
                                   # 3 provides output of the store step + 2
    string Label = "GlobalHits"
    untracked int32 Frequency = 50
+   untracked int32 VtxUnit = 1    # 0 assumes mm in SimVertex
+                                  # 1 assumes cm in SimVertex
  
    PSet ProvenanceLookup =
    {
