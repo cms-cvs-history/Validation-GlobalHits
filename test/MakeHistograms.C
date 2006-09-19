@@ -8,14 +8,15 @@
 #include "TBranch.h"
 #include "TString.h"
 
-void MakeHistograms()
+void MakeHistograms(TString srcname="GlobalHits.root",
+		    TString filename="GlobalHitsHistograms")
 {
   gROOT->Reset();
   //http://root.cern.ch/root/html/src/TStyle.cxx.html#TStyle:SetOptStat
   gStyle->SetOptStat("emruo");
 
   // setup names
-  TString srcname = "GlobalHits.root";
+  //TString srcname = "GlobalHits.root";
   TString treename = "Events";
   TString brnchname = "PGlobalSimHit_globalhits_GlobalHits_GLOBAL.obj";
 
@@ -45,7 +46,7 @@ void MakeHistograms()
   TCanvas *myCanvas = new TCanvas("globalhits","globalhits",cWidth,cHeight);
   
   // open output ps file
-  TString filename = "GlobalHitsHistograms";
+  //TString filename = "GlobalHitsHistograms";
   TString psfile = filename+".ps";
   TString psfileopen = filename+".ps[";
   TString psfileclose = filename+".ps]";
