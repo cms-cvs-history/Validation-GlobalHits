@@ -2,69 +2,69 @@ service = MessageLogger
 {
    untracked vstring destinations =
    {
-      "MessageLogger.log",
+      "MessageLogger",
       "cout",
       "cerr"
    }
 
    untracked vstring fwkJobReports = 
    {
-      "FrameworkJobReport.xml"
+      "FrameworkJobReport"
    }
 
    untracked vstring categories = 
    { 
       "FwkJob",
-      "GlobalHitsProducer.GlobalHitsProducer",
-      "GlobalHitsProducer.endJob",
-      "GlobalHitsProducer.produce",
-      "GlobalHitsProducer.fillG4MC",
-      "GlobalHitsProducer.storeG4MC",
-      "GlobalHitsProducer.fillTrk",
-      "GlobalHitsProducer.storeTrk",
-      "GlobalHitsProducer.fillMuon",
-      "GlobalHitsProducer.storeMuon",
-      "GlobalHitsProducer.fillECal",
-      "GlobalHitsProducer.storeECal",
-      "GlobalHitsProducer.fillHCal",
-      "GlobalHitsProducer.storeHCal",
-      "GlobalHitsProducer.clear",
+      "GlobalHitsProducer_GlobalHitsProducer",
+      "GlobalHitsProducer_endJob",
+      "GlobalHitsProducer_produce",
+      "GlobalHitsProducer_fillG4MC",
+      "GlobalHitsProducer_storeG4MC",
+      "GlobalHitsProducer_fillTrk",
+      "GlobalHitsProducer_storeTrk",
+      "GlobalHitsProducer_fillMuon",
+      "GlobalHitsProducer_storeMuon",
+      "GlobalHitsProducer_fillECal",
+      "GlobalHitsProducer_storeECal",
+      "GlobalHitsProducer_fillHCal",
+      "GlobalHitsProducer_storeHCal",
+      "GlobalHitsProducer_clear",
       "ScheduleExecutionFailure",
       "EventSetupDependency" 
    }
 
-   untracked PSet MessageLogger.log =
+   untracked PSet MessageLogger =
    {
       untracked int32 lineLength = 132
       untracked bool noLineBreaks = true
       untracked PSet default = { untracked int32 limit = 0  }
-      untracked PSet GlobalHitsProducer.GlobalHitsProducer = 
+      untracked PSet GlobalHitsProducer_GlobalHitsProducer = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.endJob = 
+      untracked PSet GlobalHitsProducer_endJob = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.produce = 
+      untracked PSet GlobalHitsProducer_produce = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.fillG4MC = 
+      untracked PSet GlobalHitsProducer_fillG4MC = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.storeG4MC = 
+      untracked PSet GlobalHitsProducer_storeG4MC = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.fillTrk = 
+      untracked PSet GlobalHitsProducer_fillTrk = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.storeTrk = 
+      untracked PSet GlobalHitsProducer_storeTrk = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.fillMuon = 
+      untracked PSet GlobalHitsProducer_fillMuon = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.storeMuon = 
+      untracked PSet GlobalHitsProducer_storeMuon = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.fillECal = 
+      untracked PSet GlobalHitsProducer_fillECal = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.storeECal = 
+      untracked PSet GlobalHitsProducer_storeECal = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.fillHCal = 
+      untracked PSet GlobalHitsProducer_fillHCal = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.storeHCal = 
+      untracked PSet GlobalHitsProducer_storeHCal = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.clear = 
+      untracked PSet GlobalHitsProducer_clear = 
 	{ untracked int32 limit = 10000000 }
       untracked PSet ScheduleExecutionFailure = 
 	{ untracked int32 limit = 10000000 }
@@ -77,33 +77,33 @@ service = MessageLogger
       untracked bool noLineBreaks = true
       untracked string threshold = "INFO"
       untracked PSet default = { untracked int32 limit = 0  }
-      untracked PSet GlobalHitsProducer.GlobalHitsProducer = 
+      untracked PSet GlobalHitsProducer_GlobalHitsProducer = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.endJob = 
+      untracked PSet GlobalHitsProducer_endJob = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.produce = 
+      untracked PSet GlobalHitsProducer_produce = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.fillG4MC = 
+      untracked PSet GlobalHitsProducer_fillG4MC = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.storeG4MC = 
+      untracked PSet GlobalHitsProducer_storeG4MC = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.fillTrk = 
+      untracked PSet GlobalHitsProducer_fillTrk = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.storeTrk = 
+      untracked PSet GlobalHitsProducer_storeTrk = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.fillMuon = 
+      untracked PSet GlobalHitsProducer_fillMuon = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.storeMuon = 
+      untracked PSet GlobalHitsProducer_storeMuon = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.fillECal = 
+      untracked PSet GlobalHitsProducer_fillECal = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.storeECal = 
+      untracked PSet GlobalHitsProducer_storeECal = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.fillHCal = 
+      untracked PSet GlobalHitsProducer_fillHCal = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.storeHCal = 
+      untracked PSet GlobalHitsProducer_storeHCal = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.clear = 
+      untracked PSet GlobalHitsProducer_clear = 
 	{ untracked int32 limit = 10000000 }
       //untracked PSet ScheduleExecutionFailure = 
       //	{ untracked int32 limit = 10000000 }
@@ -116,33 +116,33 @@ service = MessageLogger
       untracked bool noLineBreaks = true
       untracked string threshold = "WARNING"
       untracked PSet default = { untracked int32 limit = 0  }
-      untracked PSet GlobalHitsProducer.GlobalHitsProducer = 
+      untracked PSet GlobalHitsProducer_GlobalHitsProducer = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.endJob = 
+      untracked PSet GlobalHitsProducer_endJob = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.produce = 
+      untracked PSet GlobalHitsProducer_produce = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.fillG4MC = 
+      untracked PSet GlobalHitsProducer_fillG4MC = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.storeG4MC = 
+      untracked PSet GlobalHitsProducer_storeG4MC = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.fillTrk = 
+      untracked PSet GlobalHitsProducer_fillTrk = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.storeTrk = 
+      untracked PSet GlobalHitsProducer_storeTrk = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.fillMuon = 
+      untracked PSet GlobalHitsProducer_fillMuon = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.storeMuon = 
+      untracked PSet GlobalHitsProducer_storeMuon = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.fillECal = 
+      untracked PSet GlobalHitsProducer_fillECal = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.storeECal = 
+      untracked PSet GlobalHitsProducer_storeECal = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.fillHCal = 
+      untracked PSet GlobalHitsProducer_fillHCal = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.storeHCal = 
+      untracked PSet GlobalHitsProducer_storeHCal = 
 	{ untracked int32 limit = 10000000 }
-      untracked PSet GlobalHitsProducer.clear = 
+      untracked PSet GlobalHitsProducer_clear = 
 	{ untracked int32 limit = 10000000 } 
       untracked PSet ScheduleExecutionFailure = 
 	{ untracked int32 limit = 10000000 }
@@ -150,7 +150,7 @@ service = MessageLogger
 	{ untracked int32 limit = 10000000 } 
    }
 
-   untracked PSet FrameworkJobReport.xml = 
+   untracked PSet FrameworkJobReport = 
    {
       //untracked PSet default = 
       //	{ untracked int32 limit = 0 }
