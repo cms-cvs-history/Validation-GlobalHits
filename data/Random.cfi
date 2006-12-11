@@ -4,5 +4,6 @@ service = RandomNumberGeneratorService
    PSet moduleSeeds =
    {
       untracked uint32 VtxSmeared = 123456789
+      untracked uint32 g4SimHits = 9876
    }
 }
