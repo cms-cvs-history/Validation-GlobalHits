@@ -675,7 +675,7 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   label->SetTextAlign(22);
   myCanvas = Canvas1;
   myCanvas->cd(0);
-  label->DrawLatex(0.5,1.00,"Monte Carlo RawGenPart");
+  //label->DrawLatex(0.5,1.00,"Monte Carlo RawGenPart");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
     gPad->SetLogy();
@@ -688,7 +688,7 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   Canvas2->Divide(2,4);
   myCanvas = Canvas2;
   myCanvas->cd(0);
-  label->DrawLatex(0.5,1.00,"Geant4 Vertices");
+  //label->DrawLatex(0.5,1.00,"Geant4 Vertices");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
     gPad->SetLogy();    
@@ -710,7 +710,7 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   Canvas3->Divide(2,2);
   myCanvas = Canvas3;
   myCanvas->cd(0);
-  label->DrawLatex(0.5,1.00,"Geant4 Tracks");
+  //label->DrawLatex(0.5,1.00,"Geant4 Tracks");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
     gPad->SetLogy();
@@ -729,7 +729,7 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   Canvas4->Divide(2,4);
   myCanvas = Canvas4;
   myCanvas->cd(0);
-  label->DrawLatex(0.5,1.00,"ECal Information");
+  //label->DrawLatex(0.5,1.00,"ECal Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
     gPad->SetLogy();
@@ -754,7 +754,7 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   Canvas5->Divide(2,4);
   myCanvas = Canvas5;
   myCanvas->cd(0);
-  label->DrawLatex(0.5,1.00,"PreShower Information");
+  //label->DrawLatex(0.5,1.00,"PreShower Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
     gPad->SetLogy();
@@ -779,7 +779,7 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   Canvas6->Divide(2,4);
   myCanvas = Canvas6;
   myCanvas->cd(0);
-  label->DrawLatex(0.5,1.00,"HCal Information");
+  //label->DrawLatex(0.5,1.00,"HCal Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
     gPad->SetLogy();
@@ -804,7 +804,7 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   Canvas7->Divide(2,4);
   myCanvas = Canvas7;
   myCanvas->cd(0);
-  label->DrawLatex(0.5,1.00,"Pixel Information");
+  //label->DrawLatex(0.5,1.00,"Pixel Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
     gPad->SetLogy();
@@ -835,7 +835,7 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   Canvas8->Divide(2,4);
   myCanvas = Canvas8;
   myCanvas->cd(0);
-  label->DrawLatex(0.5,1.00,"Strip Information");
+  //label->DrawLatex(0.5,1.00,"Strip Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
     gPad->SetLogy();
@@ -866,7 +866,7 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   Canvas9->Divide(2,2);
   myCanvas = Canvas9;
   myCanvas->cd(0);
-  label->DrawLatex(0.5,1.00,"Muon Information");
+  //label->DrawLatex(0.5,1.00,"Muon Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
     gPad->SetLogy();
@@ -885,7 +885,7 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   Canvas10->Divide(2,2);
   myCanvas = Canvas10;
   myCanvas->cd(0);
-  label->DrawLatex(0.5,1.00,"Muon CSC Information");
+  //label->DrawLatex(0.5,1.00,"Muon CSC Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
     gPad->SetLogy();
@@ -901,7 +901,7 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   Canvas11->Divide(2,2);
   myCanvas = Canvas11;
   myCanvas->cd(0);
-  label->DrawLatex(0.5,1.00,"Muon DT Information");
+  //label->DrawLatex(0.5,1.00,"Muon DT Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
     gPad->SetLogy();
@@ -917,7 +917,7 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   Canvas12->Divide(2,3);
   myCanvas = Canvas12;
   myCanvas->cd(0);
-  label->DrawLatex(0.5,1.00,"Muon RPC Information");
+  //label->DrawLatex(0.5,1.00,"Muon RPC Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
     gPad->SetLogy();
