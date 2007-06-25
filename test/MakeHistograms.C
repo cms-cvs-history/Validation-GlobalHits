@@ -15,16 +15,16 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   //http://root.cern.ch/root/html/src/TStyle.cxx.html#TStyle:SetOptStat
   gStyle->SetOptStat("emruo");
 
-  // setup names
-  //TString srcname = "GlobalHits.root";
-  TString treename = "Events";
-  TString brnchname = "PGlobalSimHit_globalhits_GlobalHits_GLOBAL.obj";
-
   // clear memory of file name
   delete gROOT->GetListOfFiles()->FindObject(srcname);
 
   // open source file
   TFile *srcfile = new TFile(srcname);
+
+  // setup names
+  //TString srcname = "GlobalHits.root";
+  TString treename = "Events";
+  TString brnchname = "PGlobalSimHit_globalhits_GlobalHits_GLOBAL.obj";
   
   // get tree from file
   TTree *srcevts = dynamic_cast<TTree*>(srcfile->Get(treename));
@@ -678,7 +678,7 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   //label->DrawLatex(0.5,1.00,"Monte Carlo RawGenPart");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hMCRGP[i]->Draw();
   }
   myCanvas->Print(psfile);
@@ -691,7 +691,7 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   //label->DrawLatex(0.5,1.00,"Geant4 Vertices");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
-    gPad->SetLogy();    
+    //    gPad->SetLogy();    
     hMCG4Vtx[i]->Draw();
     myCanvas->cd(i+3);
     //gPad->SetLogy();
@@ -713,14 +713,14 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   //label->DrawLatex(0.5,1.00,"Geant4 Tracks");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hMCG4Trk[i]->Draw();
   }
   myCanvas->cd(3);
-  gPad->SetLogy();  
+  //  gPad->SetLogy();  
   hGeantTrkPt->Draw();
   myCanvas->cd(4);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hGeantTrkE->Draw();
   myCanvas->Print(psfile);
 
@@ -732,20 +732,20 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   //label->DrawLatex(0.5,1.00,"ECal Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hCaloEcal[i]->Draw();
     myCanvas->cd(i+3);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hCaloEcalE[i]->Draw();
     myCanvas->cd(i+5);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hCaloEcalToF[i]->Draw();
   }
   myCanvas->cd(7);
   hCaloEcalPhi->Draw();
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   myCanvas->cd(8);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hCaloEcalEta->Draw();
   myCanvas->Print(psfile);
 
@@ -757,20 +757,20 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   //label->DrawLatex(0.5,1.00,"PreShower Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hCaloPreSh[i]->Draw();
     myCanvas->cd(i+3);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hCaloPreShE[i]->Draw();
     myCanvas->cd(i+5);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hCaloPreShToF[i]->Draw();
   }
   myCanvas->cd(7);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hCaloPreShPhi->Draw();
   myCanvas->cd(8);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hCaloPreShEta->Draw();
   myCanvas->Print(psfile);
 
@@ -782,20 +782,20 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   //label->DrawLatex(0.5,1.00,"HCal Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hCaloHcal[i]->Draw();
     myCanvas->cd(i+3);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hCaloHcalE[i]->Draw();
     myCanvas->cd(i+5);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hCaloHcalToF[i]->Draw();
   }
   myCanvas->cd(7);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hCaloHcalPhi->Draw();
   myCanvas->cd(8);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hCaloHcalEta->Draw();
   myCanvas->Print(psfile);
 
@@ -807,26 +807,26 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   //label->DrawLatex(0.5,1.00,"Pixel Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hTrackerPx[i]->Draw();
   }
   myCanvas->cd(3);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hTrackerPxPhi->Draw();
   myCanvas->cd(4);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hTrackerPxEta->Draw();
   myCanvas->cd(5);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hTrackerPxBToF->Draw();
   myCanvas->cd(6);
-  gPad->SetLogy(); 
+  //  gPad->SetLogy(); 
   hTrackerPxBR->Draw();
   myCanvas->cd(7);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hTrackerPxFToF->Draw();
   myCanvas->cd(8);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hTrackerPxFZ->Draw();
   myCanvas->Print(psfile);
 
@@ -838,26 +838,26 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   //label->DrawLatex(0.5,1.00,"Strip Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hTrackerSi[i]->Draw();
   }
   myCanvas->cd(3);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hTrackerSiPhi->Draw();
   myCanvas->cd(4);
-  gPad->SetLogy(); 
+  //  gPad->SetLogy(); 
   hTrackerSiEta->Draw();
   myCanvas->cd(5);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hTrackerSiBToF->Draw();
   myCanvas->cd(6);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hTrackerSiBR->Draw();
   myCanvas->cd(7);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hTrackerSiFToF->Draw();
   myCanvas->cd(8);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hTrackerSiFZ->Draw();
   myCanvas->Print(psfile);
 
@@ -869,14 +869,14 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   //label->DrawLatex(0.5,1.00,"Muon Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hMuon[i]->Draw();
   }
   myCanvas->cd(3);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hMuonPhi->Draw();
   myCanvas->cd(4);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hMuonEta->Draw();
   myCanvas->Print(psfile);
 
@@ -888,11 +888,11 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   //label->DrawLatex(0.5,1.00,"Muon CSC Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hMuonCscToF[i]->Draw();
   }
   myCanvas->cd(3);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hMuonCscZ->Draw();
   myCanvas->Print(psfile);
 
@@ -904,11 +904,11 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   //label->DrawLatex(0.5,1.00,"Muon DT Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hMuonDtToF[i]->Draw();
   }
   myCanvas->cd(3);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hMuonDtR->Draw();
   myCanvas->Print(psfile);
 
@@ -920,17 +920,17 @@ void MakeHistograms(TString srcname="GlobalHits.root",
   //label->DrawLatex(0.5,1.00,"Muon RPC Information");
   for (Int_t i = 0; i < 2; ++i) {
     myCanvas->cd(i+1);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hMuonRpcBToF[i]->Draw();
     myCanvas->cd(i+4);
-    gPad->SetLogy();
+    //    gPad->SetLogy();
     hMuonRpcFToF[i]->Draw();
   }
   myCanvas->cd(3);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hMuonRpcBR->Draw();
   myCanvas->cd(6);
-  gPad->SetLogy();
+  //  gPad->SetLogy();
   hMuonRpcFZ->Draw();
   myCanvas->Print(psfile);
 
