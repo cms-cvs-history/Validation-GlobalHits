@@ -1,11 +1,11 @@
-module globalhits = GlobalHitsProducer
+module globalhitsanalyze = GlobalHitsAnalyzer
 {
-    untracked string Name = "GlobalHitsProducer"
+    untracked string Name = "GlobalHitsAnalyzer"
     untracked int32 Verbosity = 0  # 0 provides no output
                                    # 1 provides basic output
                                    # 2 provides output of the fill step + 1
                                    # 3 provides output of the store step + 2
-    string Label = "GlobalHits"
+    string OutputFile = "GlobalHitsHistograms.root"
     untracked int32 Frequency = 50
     
     // as of 110p2, needs to be 1. Anything ealier should be 0.
@@ -42,28 +42,5 @@ module globalhits = GlobalHitsProducer
     InputTag ECalESSrc = g4SimHits:EcalHitsES
     
     InputTag HCalSrc = g4SimHits:HcalHits
-    
-    //InputTag PxlBrlLowSrc = SimG4Object:TrackerHitsPixelBarrelLowTof
-    //InputTag PxlBrlHighSrc = SimG4Object:TrackerHitsPixelBarrelHighTof
-    //InputTag PxlFwdLowSrc = SimG4Object:TrackerHitsPixelEndcapLowTof
-    //InputTag PxlFwdHighSrc = SimG4Object:TrackerHitsPixelEndcapHighTof
-    
-    //InputTag SiTIBLowSrc = SimG4Object:TrackerHitsTIBLowTof
-    //InputTag SiTIBHighSrc = SimG4Object:TrackerHitsTIBHighTof
-    //InputTag SiTOBLowSrc = SimG4Object:TrackerHitsTOBLowTof
-    //InputTag SiTOBHighSrc = SimG4Object:TrackerHitsTOBHighTof
-    //InputTag SiTIDLowSrc = SimG4Object:TrackerHitsTIDLowTof
-    //InputTag SiTIDHighSrc = SimG4Object:TrackerHitsTIDHighTof
-    //InputTag SiTECLowSrc = SimG4Object:TrackerHitsTECLowTof
-    //InputTag SiTECHighSrc = SimG4Object:TrackerHitsTECHighTof
-     
-    //InputTag MuonCscSrc = SimG4Object:MuonCSCHits
-    //InputTag MuonDtSrc = SimG4Object:MuonDTHits
-    //InputTag MuonRpcSrc = SimG4Object:MuonRPCHits
-    
-    //InputTag ECalEBSrc = SimG4Object:EcalHitsEB
-    //InputTag ECalEESrc = SimG4Object:EcalHitsEE
-    //InputTag ECalESSrc = SimG4Object:EcalHitsES
-    
-    //InputTag HCalSrc = SimG4Object:HcalHits
-}
+}    
+

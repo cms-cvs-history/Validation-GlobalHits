@@ -30,7 +30,15 @@ service = MessageLogger
       "GlobalHitsProducer_storeHCal",
       "GlobalHitsProducer_clear",
       "ScheduleExecutionFailure",
-      "EventSetupDependency" 
+      "EventSetupDependency", 
+      "GlobalHitsAnalyzer_GlobalHitsAnalyzer",
+      "GlobalHitsAnalyzer_endJob",
+      "GlobalHitsAnalyzer_analyze",
+      "GlobalHitsAnalyzer_fillG4MC",
+      "GlobalHitsAnalyzer_fillTrk",
+      "GlobalHitsAnalyzer_fillMuon",
+      "GlobalHitsAnalyzer_fillECal",
+      "GlobalHitsAnalyzer_fillHCal"
    }
 
    untracked PSet MessageLogger =
@@ -70,6 +78,22 @@ service = MessageLogger
 	{ untracked int32 limit = 10000000 }
       untracked PSet EventSetupDependency = 
 	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_GlobalHitsAnalyzer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_analyze = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_fillG4MC = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_fillTrk = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_fillMuon = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_fillECal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_fillHCal = 
+	{ untracked int32 limit = 10000000 }
    }
    untracked PSet cout =
    {
@@ -108,7 +132,23 @@ service = MessageLogger
       //untracked PSet ScheduleExecutionFailure = 
       //	{ untracked int32 limit = 10000000 }
       //untracked PSet EventSetupDependency = 
-      //	{ untracked int32 limit = 10000000 }  
+      //	{ untracked int32 limit = 10000000 } 
+      untracked PSet GlobalHitsAnalyzer_GlobalHitsAnalyzer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_analyze = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_fillG4MC = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_fillTrk = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_fillMuon = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_fillECal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_fillHCal = 
+	{ untracked int32 limit = 10000000 }
    }
    untracked PSet cerr =
    {
@@ -148,6 +188,22 @@ service = MessageLogger
 	{ untracked int32 limit = 10000000 }
       untracked PSet EventSetupDependency = 
 	{ untracked int32 limit = 10000000 } 
+      untracked PSet GlobalHitsAnalyzer_GlobalHitsAnalyzer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_analyze = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_fillG4MC = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_fillTrk = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_fillMuon = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_fillECal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsAnalyzer_fillHCal = 
+	{ untracked int32 limit = 10000000 }
    }
 
    untracked PSet FrameworkJobReport = 
