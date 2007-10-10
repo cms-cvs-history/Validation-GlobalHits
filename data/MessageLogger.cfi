@@ -38,7 +38,10 @@ service = MessageLogger
       "GlobalHitsAnalyzer_fillTrk",
       "GlobalHitsAnalyzer_fillMuon",
       "GlobalHitsAnalyzer_fillECal",
-      "GlobalHitsAnalyzer_fillHCal"
+      "GlobalHitsAnalyzer_fillHCal",
+      "GlobalHitsHistogrammer_GlobalHitsHistogrammer",
+      "GlobalHitsHistogrammer_endJob",
+      "GlobalHitsHistogrammer_analyze"
    }
 
    untracked PSet MessageLogger =
@@ -93,6 +96,12 @@ service = MessageLogger
       untracked PSet GlobalHitsAnalyzer_fillECal = 
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalHitsAnalyzer_fillHCal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsHistogrammer_GlobalHitsHistogrammer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsHistogrammer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsHistogrammer_analyze = 
 	{ untracked int32 limit = 10000000 }
    }
    untracked PSet cout =
@@ -149,6 +158,12 @@ service = MessageLogger
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalHitsAnalyzer_fillHCal = 
 	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsHistogrammer_GlobalHitsHistogrammer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsHistogrammer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsHistogrammer_analyze = 
+	{ untracked int32 limit = 10000000 }
    }
    untracked PSet cerr =
    {
@@ -203,6 +218,12 @@ service = MessageLogger
       untracked PSet GlobalHitsAnalyzer_fillECal = 
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalHitsAnalyzer_fillHCal = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsHistogrammer_GlobalHitsHistogrammer = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsHistogrammer_endJob = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsHistogrammer_analyze = 
 	{ untracked int32 limit = 10000000 }
    }
 
