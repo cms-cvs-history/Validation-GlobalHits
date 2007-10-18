@@ -30,7 +30,9 @@ service = MessageLogger
       "GlobalHitsProducer_storeHCal",
       "GlobalHitsProducer_clear",
       "ScheduleExecutionFailure",
-      "EventSetupDependency", 
+      "EventSetupDependency",
+      "Root_Warning",
+      "Root_Error",
       "GlobalHitsAnalyzer_GlobalHitsAnalyzer",
       "GlobalHitsAnalyzer_endJob",
       "GlobalHitsAnalyzer_analyze",
@@ -41,7 +43,16 @@ service = MessageLogger
       "GlobalHitsAnalyzer_fillHCal",
       "GlobalHitsHistogrammer_GlobalHitsHistogrammer",
       "GlobalHitsHistogrammer_endJob",
-      "GlobalHitsHistogrammer_analyze"
+      "GlobalHitsHistogrammer_analyze",
+      "GlobalHitsProdHist_GlobalHitsProdHist",
+      "GlobalHitsProdHist_endJob",
+      "GlobalHitsProdHist_produce",
+      "GlobalHitsProdHist_fillG4MC",
+      "GlobalHitsProdHist_fillTrk",
+      "GlobalHitsProdHist_fillMuon",
+      "GlobalHitsProdHist_fillECal",
+      "GlobalHitsProdHist_fillHCal",
+      "GlobalHitsProdHist_endRun"
    }
 
    untracked PSet MessageLogger =
@@ -81,6 +92,10 @@ service = MessageLogger
 	{ untracked int32 limit = 10000000 }
       untracked PSet EventSetupDependency = 
 	{ untracked int32 limit = 10000000 }
+      untracked PSet Root_Warning =
+        { untracked int32 limit = 10000000 }
+      untracked PSet Root_Error =
+        { untracked int32 limit = 10000000 }
       untracked PSet GlobalHitsAnalyzer_GlobalHitsAnalyzer = 
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalHitsAnalyzer_endJob = 
@@ -102,6 +117,24 @@ service = MessageLogger
       untracked PSet GlobalHitsHistogrammer_endJob = 
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalHitsHistogrammer_analyze = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_GlobalHitsProdHist =	
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_endJob =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_produce =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_fillG4MC =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_fillTrk =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_fillMuon =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_fillECal =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_fillHCal =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_endRun =
 	{ untracked int32 limit = 10000000 }
    }
    untracked PSet cout =
@@ -164,6 +197,24 @@ service = MessageLogger
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalHitsHistogrammer_analyze = 
 	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_GlobalHitsProdHist =	
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_endJob =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_produce =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_fillG4MC =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_fillTrk =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_fillMuon =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_fillECal =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_fillHCal =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_endRun =
+	{ untracked int32 limit = 10000000 }
    }
    untracked PSet cerr =
    {
@@ -202,7 +253,11 @@ service = MessageLogger
       untracked PSet ScheduleExecutionFailure = 
 	{ untracked int32 limit = 10000000 }
       untracked PSet EventSetupDependency = 
-	{ untracked int32 limit = 10000000 } 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet Root_Warning =
+        { untracked int32 limit = 10000000 }
+      untracked PSet Root_Error =
+        { untracked int32 limit = 10000000 } 
       untracked PSet GlobalHitsAnalyzer_GlobalHitsAnalyzer = 
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalHitsAnalyzer_endJob = 
@@ -224,6 +279,24 @@ service = MessageLogger
       untracked PSet GlobalHitsHistogrammer_endJob = 
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalHitsHistogrammer_analyze = 
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_GlobalHitsProdHist =	
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_endJob =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_produce =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_fillG4MC =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_fillTrk =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_fillMuon =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_fillECal =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_fillHCal =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHist_endRun =
 	{ untracked int32 limit = 10000000 }
    }
 
