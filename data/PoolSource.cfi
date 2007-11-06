@@ -9,7 +9,8 @@ source = PoolSource
 	//'/store/mc/2007/9/28/RelVal-RelValMinBiasValidation-1191021621/0000/D09B19DC-2E6E-DC11-B627-003048767EDD.root',
 	//'/store/mc/2007/9/28/RelVal-RelValMinBiasValidation-1191021621/0000/F26EB639-306E-DC11-A608-001731AF692D.root',
 	//'/store/mc/2007/9/28/RelVal-RelValMinBiasValidation-1191021621/0000/F8D535CE-406E-DC11-94E7-003048769E6B.root' 
-        "file:MinBias.root"
+        //"file:MinBias.root"
+	"file:GlobalHits.root"
    }
    //untracked int32 maxEvents = 10000
 }

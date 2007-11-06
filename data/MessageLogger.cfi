@@ -52,7 +52,11 @@ service = MessageLogger
       "GlobalHitsProdHist_fillMuon",
       "GlobalHitsProdHist_fillECal",
       "GlobalHitsProdHist_fillHCal",
-      "GlobalHitsProdHist_endRun"
+      "GlobalHitsProdHist_endRun",
+      "GlobalHitsProdHistStripper_GlobalHitsProdHistStripper",
+      "GlobalHitsProdHistStripper_endJob",
+      "GlobalHitsProdHistStripper_beginRun",
+      "GlobalHitsProdHistStripper_endRun"
    }
 
    untracked PSet MessageLogger =
@@ -136,6 +140,14 @@ service = MessageLogger
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalHitsProdHist_endRun =
 	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHistStripper_GlobalHitsProdHistStripper =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHistStripper_endJob =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHistStripper_beginRun =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHistStripper_endRun =
+	{ untracked int32 limit = 10000000 }
    }
    untracked PSet cout =
    {
@@ -214,6 +226,14 @@ service = MessageLogger
       untracked PSet GlobalHitsProdHist_fillHCal =
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalHitsProdHist_endRun =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHistStripper_GlobalHitsProdHistStripper =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHistStripper_endJob =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHistStripper_beginRun =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHistStripper_endRun =
 	{ untracked int32 limit = 10000000 }
    }
    untracked PSet cerr =
@@ -297,6 +317,14 @@ service = MessageLogger
       untracked PSet GlobalHitsProdHist_fillHCal =
 	{ untracked int32 limit = 10000000 }
       untracked PSet GlobalHitsProdHist_endRun =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHistStripper_GlobalHitsProdHistStripper =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHistStripper_endJob =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHistStripper_beginRun =
+	{ untracked int32 limit = 10000000 }
+      untracked PSet GlobalHitsProdHistStripper_endRun =
 	{ untracked int32 limit = 10000000 }
    }
 
