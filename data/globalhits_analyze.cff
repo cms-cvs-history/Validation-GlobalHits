@@ -7,7 +7,7 @@
 //es_module = EcalEndcapGeometryEP {}
 //es_module = HcalHardcodeGeometryEP {}
 //es_module = CaloTowerHardcodeGeometryEP {}
-//es_module = CaloGeometryBuilder {}
+//include "Geometry/CaloEventSetup/data/CaloGeometry.cff"
 
 //include "Geometry/CSCGeometry/data/cscGeometry.cfi"
 //include "Geometry/DTGeometry/data/dtGeometry.cfi"
