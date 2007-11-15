@@ -5,7 +5,7 @@ module globalhitsanalyze = GlobalHitsAnalyzer
                                    # 1 provides basic output
                                    # 2 provides output of the fill step + 1
                                    # 3 provides output of the store step + 2
-    string OutputFile = "GlobalHitsHistograms.root"
+    string OutputFile = "GlobalHitsHistogramsAnalyze.root"
     untracked int32 Frequency = 50
     
     // as of 110p2, needs to be 1. Anything ealier should be 0.
