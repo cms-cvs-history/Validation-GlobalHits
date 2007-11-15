@@ -13,7 +13,7 @@ include "Geometry/CaloEventSetup/data/CaloGeometry.cff"
 include "Geometry/CSCGeometry/data/cscGeometry.cfi"
 include "Geometry/DTGeometry/data/dtGeometry.cfi"
 include "Geometry/RPCGeometry/data/rpcGeometry.cfi"
-include "Geometry/ForwardGeometry/data/ForwardGeometry.cff"
+//include "Geometry/ForwardGeometry/data/ForwardGeometry.cff"
   
 ## actual producer
 include "Validation/GlobalHits/data/globalhits_prodhist.cfi"
