@@ -14,7 +14,7 @@
 //include "Geometry/RPCGeometry/data/rpcGeometry.cfi"
 
 ## needed backend
-service = DaqMonitorROOTBackEnd{ }
+service = DQMStore{ }
   
 ## actual producer
 include "Validation/GlobalHits/data/globalhits_analyze.cfi"
