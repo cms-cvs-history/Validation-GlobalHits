@@ -4,9 +4,8 @@
 service = DQMStore{ }
 
 include "DQMServices/Components/test/dqm_onlineEnv.cfi"
-replace dqmSaver.fileName = "GlobalHitsAnalyze"
-replace dqmSaver.saveAtRunEnd = false
-replace dqmSaver.saveAtJobEnd = true
+replace dqmSaver.convention = "RelVal"
+replace dqmSaver.workflow = "/GlobalValidation/Test/RECO"
   
 ## actual producer
 include "Validation/GlobalHits/data/globalhits_analyze.cfi"
