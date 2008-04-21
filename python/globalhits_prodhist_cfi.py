@@ -1,6 +1,6 @@
 import FWCore.ParameterSet.Config as cms
 
-globalhitsanalyze = cms.EDAnalyzer("GlobalHitsAnalyzer",
+globalhitsprodhist = cms.EDFilter("GlobalHitsProdHist",
     MuonRpcSrc = cms.InputTag("g4SimHits","MuonRPCHits"),
     PxlBrlHighSrc = cms.InputTag("g4SimHits","TrackerHitsPixelBarrelHighTof"),
     SiTOBLowSrc = cms.InputTag("g4SimHits","TrackerHitsTOBLowTof"),
@@ -12,11 +12,10 @@ globalhitsanalyze = cms.EDAnalyzer("GlobalHitsAnalyzer",
     SiTECLowSrc = cms.InputTag("g4SimHits","TrackerHitsTECLowTof"),
     MuonCscSrc = cms.InputTag("g4SimHits","MuonCSCHits"),
     SiTIDHighSrc = cms.InputTag("g4SimHits","TrackerHitsTIDHighTof"),
-    Name = cms.untracked.string('GlobalHitsAnalyzer'),
+    Name = cms.untracked.string('GlobalHitsProdHist'),
     Verbosity = cms.untracked.int32(0), ## 0 provides no output
 
     PxlFwdLowSrc = cms.InputTag("g4SimHits","TrackerHitsPixelEndcapLowTof"),
-    # as of 090p3 should be g4SimHits. Anything earlier SimG4Object
     PxlBrlLowSrc = cms.InputTag("g4SimHits","TrackerHitsPixelBarrelLowTof"),
     SiTIBLowSrc = cms.InputTag("g4SimHits","TrackerHitsTIBLowTof"),
     SiTOBHighSrc = cms.InputTag("g4SimHits","TrackerHitsTOBHighTof"),
